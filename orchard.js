@@ -51,8 +51,12 @@ const pinkPrice = .55
 
 // CODE HERE
 
+for (let i = 0;i < fujiAcres.length && galaAcres.length && pinkAcres.length;i++) {
+    let totalAcres =  fujiAcres[i] + galaAcres[i] + pinkAcres[i];
+    // console.log(totalAcres);
+}
 
-
+// come back!!! total is 63
 
 
 // PROBLEM 2
@@ -69,10 +73,15 @@ const pinkPrice = .55
 
 // CODE HERE
 
+for (let i = 0;i < fujiAcres.length && galaAcres.length && pinkAcres.length;i++) {
+    let totalAcres = fujiAcres[i] + galaAcres[i] + pinkAcres[i];
+    let averageDailyAcres = (totalAcres) / 7;
+    // console.log(averageDailyAcres);
+
+}
 
 
-
-
+//average is 9/day come back!!
 // PROBLEM 3
 
 /*
@@ -107,7 +116,12 @@ let days = 0
 
 // CODE HERE
 
-
+while (acresLeft > days) {
+    acresLeft -= 9;
+    days++;
+}
+// console.log(days);
+//18 days
 
 // PROBLEM 4
 
@@ -135,12 +149,20 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
 
+for (let i = 0;i < fujiAcres.length && galaAcres.length && pinkAcres.length;i++) {
+    
+      fujiTons = (fujiAcres[i]) * 6.5;
+      galaTons = (galaAcres[i]) * 6.5;
+      pinkTons = (pinkAcres[i]) * 6.5;
+}
 
-
+// console.log(fujiTons);
+// console.log(galaTons);
+// console.log(pinkTons);
 
 
 
@@ -161,11 +183,21 @@ let days = 0
 */
 
 // CODE HERE 
+// 97.5 tons //27857.14 lbs per day
+//169 tons //48285.7 lbs per day
+//143 tons //40857.14 lbs  per day
+let fujiPounds = 195000
+let galaPounds = 338000
+let pinkPounds = 286000
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
-
+// for (let i = 0;i < 1;i++) {
+//     fujiPounds = fujiPounds / 7;
+//     galaPounds = galaPounds / 7;
+//     pinkTons  = pinkTons / 7;
+// }
+// console.log(fujiPounds);
+// console.log(galaPounds);
+// console.log(pinkPounds);
 
 
 
@@ -189,11 +221,19 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = 0;
+let galaProfit = 0;
+let pinkProfit = 0;
 
 
+for (let i = 0;i < 1;i++) {
+    fujiProfit = fujiPounds * fujiPrice;
+    galaProfit = galaPounds * galaPrice;
+    pinkProfit = pinkPounds * pinkPrice;
+}
+// console.log(fujiProfit);
+// console.log(galaProfit);
+// console.log(pinkProfit);
 
 
 
@@ -209,3 +249,8 @@ let days = 0
 */
 
 // CODE HERE
+
+for (let i = 0;i < 1;i++) {
+    totalProfit = fujiProfit +  galaProfit + pinkProfit;
+//    console.log(totalProfit);
+}
