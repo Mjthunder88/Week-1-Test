@@ -50,13 +50,15 @@ const pinkPrice = .55
 */
 
 // CODE HERE
+let totalAcres = 0;
 
 for (let i = 0;i < fujiAcres.length && galaAcres.length && pinkAcres.length;i++) {
-    let totalAcres =  fujiAcres[i] + galaAcres[i] + pinkAcres[i];
-    // console.log(totalAcres);
+    totalAcres += fujiAcres[i] + galaAcres[i] + pinkAcres[i];
 }
+console.log(totalAcres);
 
-// come back!!! total is 63
+// come back!!! total is 63 
+// Fixed the problem! I overthought this problem right around adding the numbers to the new variable. I also realized it's easier to create the variable outside of the for loop then integrate it into the problem. Becuase otherwise I have to deal with declaring it inside the for loop. But I now understand that each itiration just adds the apples then adds it to the current value of totalArces, then repeats the process until it hits the same length as the apples arrays. 
 
 
 // PROBLEM 2
@@ -73,15 +75,15 @@ for (let i = 0;i < fujiAcres.length && galaAcres.length && pinkAcres.length;i++)
 
 // CODE HERE
 
+let averageDailyAcres = 0;
+
 for (let i = 0;i < fujiAcres.length && galaAcres.length && pinkAcres.length;i++) {
-    let totalAcres = fujiAcres[i] + galaAcres[i] + pinkAcres[i];
-    let averageDailyAcres = (totalAcres) / 7;
-    // console.log(averageDailyAcres);
-
+        averageDailyAcres = (totalAcres) / 7;
 }
-
+console.log(averageDailyAcres);
 
 //average is 9/day come back!!
+// fixed this problem to give me the averages all added together. I felt like I overthought a lot of these problems. 
 // PROBLEM 3
 
 /*
@@ -116,12 +118,12 @@ let days = 0
 
 // CODE HERE
 
-while (acresLeft > days) {
-    acresLeft -= 9;
-    days++;
+while (acresLeft > 0) {
+   days++;
+   acresLeft -= averageDailyAcres;
 }
-// console.log(days);
-//18 days
+console.log(days);
+// fixed  this problem to stop getting 18 days. I overthought this problem as well. I also didn't have an assignment operator for when you subtract the amount of days from the average daily. So it wasn't giving acresLeft a new value for each iteration. 
 
 // PROBLEM 4
 
@@ -238,6 +240,7 @@ for (let i = 0;i < 1;i++) {
 
 
 
+
 // PROBLEM 7
 
 /*
@@ -254,3 +257,5 @@ for (let i = 0;i < 1;i++) {
     totalProfit = fujiProfit +  galaProfit + pinkProfit;
 //    console.log(totalProfit);
 }
+
+//took the variables that already contained the profits and added them together before assigning them to the new variable totalprofit. So that it would do all the math then append the correct value to  totalprofit.
